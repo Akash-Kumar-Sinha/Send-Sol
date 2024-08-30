@@ -25,7 +25,7 @@ const WalletButton = () => {
       console.log("Try again later");
       return;
     }
-    
+
     connection.onAccountChange(
       publicKey,
       (updateAccountInfo) => {
