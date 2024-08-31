@@ -8,12 +8,12 @@ import {
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const endpoint = web3.clusterApiUrl("devnet");
+  const endpoint = web3.clusterApiUrl("mainnet-beta");
   const wallets = [new walletAdapterWallets.PhantomWalletAdapter()];
   return (
     <>
       <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={wallets}>
+        <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>{children}</WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>

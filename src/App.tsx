@@ -1,10 +1,10 @@
 import Home from "./pages/Home";
-import WalletContextProvider from "./pages/WalletContextProvider";
+import WalletContextProvider from "./utils/WalletContextProvider";
 
 const App = () => {
   return (
     <WalletContextProvider>
-      <div className="h-screen w-screen bg-zinc-50">
+      <div className="min-h-screen w-full bg-zinc-50">
         <Home />
       </div>
     </WalletContextProvider>
